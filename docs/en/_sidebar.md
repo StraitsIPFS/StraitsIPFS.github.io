@@ -1,1 +1,1 @@
-- [技术白皮书](/en/whitePaper.md "whitePaper")
+- [whitePaper](/en/whitePaper.md "whitePaper")
