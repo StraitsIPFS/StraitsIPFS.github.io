@@ -1,1 +1,0 @@
-- [技术白皮书](whitePaper.md "Straits IPFS white paper")

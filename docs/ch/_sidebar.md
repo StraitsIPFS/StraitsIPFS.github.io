@@ -1,1 +1,0 @@
-- [技术白皮书](whitePaper.md "海峡链IPFS白皮书")
