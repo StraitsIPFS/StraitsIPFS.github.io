@@ -1,2 +1,1 @@
-# StraitsIPFS.github.io
-StraitsIPFS 文档
+# StraitsIPFS 文档
