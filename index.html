@@ -6,7 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!--主题-->
+  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">-->
+  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css">-->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">
+  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css">-->
+  <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dolphin.css">-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
@@ -15,22 +20,75 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'Straits IPFS Document',
-      nameLink: '/',
+      // docsify 挂载元素 默认#app
+      el: '#app',
+      // 渲染 github corner 挂件
       repo: 'https://github.com/llf-invincible/llf-invincible.github.io/',
-      search: 'auto',
+      // 抓取文档标题渲染成目录
+      maxLevel: 6,
+      // 导航栏
       loadNavbar: true,
+      // 侧边栏
       loadSidebar: true,
-      auto2top: true,
+      // 隐藏侧边栏
+      //hideSidebar: true,
+      // 目录层级
       subMaxLevel: 4,
-      coverpage: true,
+      // 切换页面后是否自动跳转到页面顶部
+      auto2top: true,
+      // 首页文件加载路径
+      //homepage: 'home.md',
+
+      // 文档加载路径
       basePath:'https://StraitsIPFS.github.io/docs/',
+      // 启用相对路径
+      relativePath: true,
+      // 封面页
+      coverpage: true,
       logo: '/_media/logo.svg',
+      // 文档标题,显示在侧边栏顶部
+      name: 'Straits IPFS Document',
+      // 点击文档标题后的跳转连接
+      nameLink: {
+        '/zh/': '/zh/',
+        '/en/': '/en/',
+      },
+      // markdown 配置
+      // markdown:{},
+      // 主题颜色
       themeColor: '#473fb5',
+      // 别名设置,可以定义自由的路由规则,支持正则
+      // alias:{},
+      // 为每个页面增加标题
       autoHeader: true,
+      // 执行文档里的script标签里的脚本,只执行第一个脚本
+      executeScript:true,
+      // 禁用 emoji解析
+      //noEmoji: true,
+      // 小屏设备下合并导航栏到侧边栏
       mergeNavbar: true,
+      // 显示文档更新日期
       formatUpdated: '{MM}/{DD} {HH}:{mm}',
-      notFoundPage: 'my404.md',
+      // 外部链接打开方式
+      // externalLinkTarget: '_blank',
+      // cornerExternalLinkTarget: '_blank',
+      // 防止新打开的外部页面能控制本页面
+      // externalLinkRel: '', // default: 'noopener'
+      // routerMode: 'history', // default: 'hash'
+      // 只在访问主页时家在封面
+      //onlyCover: false,
+      // 资源的扩展名
+      //ext: '.md',
+      // 一个语言列表。在浏览这个列表中的语言的翻译文档时都会在请求到一个对应语言的翻译文档，不存在时显示默认语言的同名文档
+      fallbackLanguages: ['en'],
+      // 404页面
+      notFoundPage: {
+        '/ch': 'my404.md',
+        '/': 'my404.md',
+        '/en': 'en/_404.md',
+      },
+      search: 'auto',
+
       count:{
         countable:true,
         fontsize:'0.9em',
